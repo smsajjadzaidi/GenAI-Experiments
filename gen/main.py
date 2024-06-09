@@ -2,8 +2,8 @@ import os
 from crewai import Crew
 from textwrap import dedent
 
-from agents import senior_software_engineer, senior_qa_engineer
-from tasks import coding_task, qa_task
+from gen.agents import senior_software_engineer, senior_qa_engineer
+from gen.tasks import coding_task, qa_task
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -11,7 +11,7 @@ load_dotenv()
 os.environ["OPENAI_MODEL_NAME"] = 'gpt-4o'
 
 
-class Pandas2PolarsCrew:
+class PandasToPolarsCrew:
 
     def run(self, pandas_code: dict):
         crew = Crew(
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         'pandas_code': pandas_code
     }
 
-    crew = Pandas2PolarsCrew()
+    crew = PandasToPolarsCrew()
     result = crew.run(pandas_code)
 
     print("\n\n########################")

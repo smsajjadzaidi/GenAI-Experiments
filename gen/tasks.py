@@ -1,6 +1,6 @@
 from crewai import Task
 
-from agents import senior_software_engineer, senior_qa_engineer
+from gen.agents import senior_software_engineer, senior_qa_engineer
 
 
 coding_task = Task(

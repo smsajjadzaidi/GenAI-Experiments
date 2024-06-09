@@ -1,5 +1,5 @@
 from crewai import Agent
-from tools import (
+from gen.tools import (
     # pandas_documentation_scrape_tool,
     # polars_documentation_scrape_tool,
     search_tool
